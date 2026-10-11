@@ -34,7 +34,6 @@ int main() {
     cin >> n >> s;
     vector<int> mas (n);
     int a;
-
     for(int i =0; i<n;i++) {
         cin >> a;
         mas[i] = a;
