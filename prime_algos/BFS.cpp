@@ -36,7 +36,7 @@ int main() {
     int x = 0; // Соединения графов
     int a; // Откуда
     int b; // Куда
-    vector<vector<int>> graph(n); // Табоица рёбер
+    vector<vector<int>> graph(n); // Табоица соседей
 
     for(int i=0;i<n;i++) { // Перебор вершин
         for(int j=0;j<n;j++) { // Заполнение соседей у вершин
