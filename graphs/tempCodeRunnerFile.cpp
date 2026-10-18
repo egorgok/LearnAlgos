@@ -1,0 +1,2 @@
+
+    visited[start]=1;

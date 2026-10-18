@@ -4,13 +4,12 @@
 using namespace std;
 
 vector<bool> DFS(vector<vector<int>> &graph, int start, vector<bool> &visited) {
-
+\
     int n=graph.size();
     visited[start]=1;
 
     for(int v : graph[start]) {
         if(!visited[v]) {
-            visited[v]=1;
             DFS(graph,v,visited);
         }
     }
@@ -22,8 +21,9 @@ int main() {
     int n,m;
     cin >> n >> m;
 
-    vector<vector<int>> graph(n);
-    vector<bool> visited(n,false); 
+    vector<vector<int>> graph(n+1);
+    vector<bool> visited(n+1,false); 
+    visited[0]=1;
 
     int a,b;
     for(int i =0;i<m;i++) {
@@ -34,7 +34,7 @@ int main() {
 
     int ans = 0;
 
-    for(int i = 0;i<n;i++) {
+    for(int i = 1;i<=n;i++) {
         if(!visited[i]) {
             visited = DFS(graph,i,visited);
             ans+=1;
